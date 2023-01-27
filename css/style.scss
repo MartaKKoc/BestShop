@@ -12,12 +12,13 @@
   --font-open-sans: "Open Sans", sans-serif;
 }
 
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: var(--font-open-sans);
+  font-family: var(--font-raleway);
 }
 
 a {
@@ -35,6 +36,11 @@ h2 {
 .container {
   width: 1352px;
   margin: 0 auto;
+
+  @media (max-width: 1352px) {
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
 
@@ -86,6 +92,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  font-family: var(--font-raleway);
 }
 
 .header__nav {

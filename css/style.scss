@@ -15,6 +15,7 @@
 
 * {
   box-sizing: border-box;
+
 }
 
 body {
@@ -69,6 +70,11 @@ h2 {
 
 .btn--large {
   padding: 22px 155px;
+  @media (max-width: 375px) {
+    width: 90%;
+    padding: 16px 15px;
+    margin: 0 15px;
+  }
 }
 
 .logo {
@@ -144,12 +150,26 @@ h2 {
 .opening__heading {
   margin-top: 20px;
   margin-bottom: 38px;
+
+  @media (max-width: 1352px) {
+    width: 100%;
+    padding: 0 15px;
+  }
+  @media (max-width: 375px) {
+    width: 100%;
+    padding: 0 70px;
+    }
 }
 
 .opening__image {
   width: 100%;
   height: auto;
+  @media (max-width: 375px) {
+    width: 220%;
+    transform: translateX(-28%);
+  }
 }
+
 
 
 /**
@@ -157,10 +177,19 @@ h2 {
  */
 .statistics {
   margin-top: 100px;
+  @media (max-width: 375px) {
+    width: 100%;
+    padding: 16px 15px 0;
+    margin-top: 20px;
+
+    }
 }
 
 .statistics__title {
   text-align: center;
+  @media (max-width: 375px) {
+    font-size: 30px;
+  }
 }
 
 .statistics__container {
@@ -168,6 +197,13 @@ h2 {
   margin: 100px auto 120px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 375px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto 40px;
+  }
 }
 
 .statistics__single {
@@ -178,6 +214,10 @@ h2 {
   align-items: center;
   text-align: center;
   font-family: var(--font-raleway);
+  @media (max-width: 375px) {
+    margin-bottom: 25px;
+  }
+
 }
 
 .statistics__circle {
@@ -237,10 +277,19 @@ h2 {
 .benefits {
   padding: 100px 0;
   background-color: var(--color-light-grey);
+  @media (max-width: 375px) {
+    width: 100%;
+    padding: 50px 15px;
+  }
 }
 
 .benefits__container {
   padding: 0 100px;
+  @media (max-width: 375px) {
+    width: 100%;
+    padding: 0 0px;
+
+  }
 }
 
 .benefits__single {
@@ -251,12 +300,18 @@ h2 {
   align-items: flex-end;
   margin-bottom: 37px;
   border-radius: 5px;
+
 }
 
 .benefits__text {
   box-sizing: content-box;
   max-width: 415px;
   margin: 90px 36px;
+  @media (max-width: 375px) {
+    width: 80%;
+    font-size: 14px;
+    margin-top: -20px;
+  }
 }
 
 .benefits__text::after {
@@ -266,30 +321,50 @@ h2 {
   background-color: var(--accent-color);
   display: block;
   margin-top: 50px;
+  @media (max-width: 375px) {
+    display: none;
+
+  }
 }
 
 .benefits__description {
   margin-top: 30px;
   line-height: 1.375rem;
+  @media (max-width: 375px) {
+    margin-bottom: -40px;
+  }
 }
 
 .benefits__image {
   position: relative;
+
 }
 
 .benefits__image img {
   position: relative;
   z-index: 2;
+
+
 }
 
 .benefits__single--notebook {
   --accent-color: var(--color-redish);
+  @media (max-width: 375px) {
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
 }
 
 .benefits__single--notebook .benefits__image {
   margin-right: 117px;
   margin-bottom: 38px;
+
 }
+//--czerwona kropka za komputerem
 
 .benefits__single--notebook .benefits__image::before {
   content: "";
@@ -302,21 +377,44 @@ h2 {
   right: 0;
   top: -40px;
   transform: rotate(45deg);
+  @media (max-width: 375px) {
+    width: 30%;
+    padding: 0 15px;
+    left: 150px;
+    border-radius: 42px;
+    margin-top: 50px;
+
+  }
 }
+//--------laptop
 
 .benefits__single--notebook .benefits__image img {
   width: 386px;
   height: auto;
   position: relative;
   z-index: 2;
+  @media (max-width: 375px) {
+    width: 130%;
+    padding: 50px 0 0;
+    margin-left: 20px;
+
+  }
 }
 
+//telefon i kropka razem
 
 .benefits__single--phone {
   --accent-color: var(--color-primary);
   flex-direction: row-reverse;
   padding: 0 20px 0 70px;
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 15px;
+    align-items: center;
+  }
 }
+//-----niebieska kropka za telefonem
 
 .benefits__single--phone .benefits__image::before {
   content: "";
@@ -328,20 +426,43 @@ h2 {
   position: absolute;
   left: 0;
   top: -20px;
-}
+  @media (max-width: 375px) {
+    width: 50%;
+    height: 90%;
+    padding: 0;
+    transform: translateY(65px) translateX(85px);
+  }
+ }
+
+
+//------telefon------
 
 .benefits__single--phone .benefits__image img {
   width: 426px;
   height: auto;
+  @media (max-width: 375px) {
+    width: 60%;
+    transform: translateX(90px) translateY(60px);
+    margin: 10px 0;
+  }
 }
 
 .benefits__single--phone .benefits__text {
   margin: 70px 0;
+  @media (max-width: 375px) {
+
+  }
 }
+
+//-----cała sekcja ostatniego zdjęcia
 
 .benefits__double {
   --accent-color: var(--color-green);
   display: flex;
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .benefits__double > div {
@@ -351,11 +472,17 @@ h2 {
 .benefits__single--solo {
   max-width: 620px;
 }
+//-----tekxt w trzecim obrazku
 
 .benefits__single--solo .benefits__text {
   max-width: none;
   margin: 70px 35px;
+  @media (max-width: 375px) {
+    padding: 20px 0 0 20px;
+    margin-top: 15px;
+  }
 }
+//--- ostatnie zdjęcie głośnik
 
 .benefits__single--image {
   flex-grow: 1;
@@ -365,6 +492,10 @@ h2 {
   background-color: var(--accent-color);
   border: none;
   margin-left: 60px;
+  @media (max-width: 375px) {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 .benefits__single--image img {
@@ -384,14 +515,24 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 375px) {
+    margin: 53px 0;
+  }
 }
+
 
 .pricing__boxes {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+  }
 }
+//-----duże kafelki cen
 
 .pricing__box {
   width: 370px;
@@ -400,12 +541,26 @@ h2 {
   flex-direction: column;
   align-items: center;
   border: 1px solid var(--accent-color);
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 293px;
+    height: 250px;
+  }
 }
+//---rodzaj pakietu z ceną
 
 .pricing__details {
   margin-top: 34px;
   margin-bottom: 60px;
   text-align: center;
+  @media (max-width: 375px) {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+
+  }
 }
 
 .pricing__type {
@@ -420,6 +575,9 @@ h2 {
   font-weight: 300;
   margin-top: 25px;
   color: var(--accent-color);
+  @media (max-width: 375px) {
+    margin: 20px;
+  }
 }
 
 .pricing__limited {
@@ -432,11 +590,21 @@ h2 {
 
 .pricing__items {
   text-align: center;
+  @media (max-width: 375px) {
+    margin: 0;
+  }
 }
+
+//---- lista po prawej w cenach
 
 .pricing__item {
   font-size: 14px;
   margin-bottom: 20px;
+  @media (max-width: 375px) {
+    margin: 20px 0;
+    width: 150px;
+    text-align: left;
+  }
 }
 
 .pricing__item::before {
@@ -457,15 +625,20 @@ h2 {
   bottom: -25px;
   font-size: 0.8125rem;
   background-color: var(--accent-color);
+  @media (max-width: 375px) {
+    bottom: -105px;
+    right: 210px;
+  }
 }
 
 /*** Basic Box ***/
 .pricing__box--basic {
- --accent-color: var(--color-redish);
+  --accent-color: var(--color-redish);
 }
 
 .pricing__box--basic .pricing__price {
   margin-bottom: 30px;
+
 }
 
 
